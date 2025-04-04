@@ -1,0 +1,220 @@
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  touch-action: pan-x pan-y;
+  overscroll-behavior: contain;
+}
+
+/* Floating toolbar — top center fixed */
+.floating-toolbar {
+  position: fixed;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5rem;
+  z-index: 10;
+}
+
+/* Dark theme toggle — bottom left fixed */
+.bottom-left-toggle {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  z-index: 10;
+}
+
+.floating-toolbar button,
+.bottom-left-toggle button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  font-weight: bold;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+/* Scrollable container for schematic */
+.schematic-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollable-track {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x pan-y;
+}
+
+#schematic {
+  height: 100vh;
+  display: inline-block;
+}
+
+.floating-toolbar button {
+  background-color: var(--button-bg, #fff);
+  color: var(--button-text, #000);
+  font-weight: bold;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal-content {
+  background: #fff;
+  color: black;
+  padding: 20px;
+  max-width: 90%;
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.accordion {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-bottom: 1px solid #444;
+  outline: none;
+  transition: background-color 0.2s ease;
+  margin-top: 0.5rem;
+  border-radius: 6px;
+}
+
+.accordion:hover {
+  background-color: #333333;
+}
+
+.panel {
+  padding: 0.5rem 1rem;
+  display: none;
+  background-color: #2a2a2a;
+  border-left: 3px solid #888;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.panel img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Light Theme - Default */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --panel-bg: #f9f9f9;
+  --accordion-bg: #eeeeee;
+  --accordion-hover: #dddddd;
+  --modal-bg: #ffffff;
+  --button-bg: #ffffff;
+  --button-text: #000000;
+}
+
+/* Dark Theme Overrides */
+body.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --panel-bg: #2a2a2a;
+  --accordion-bg: #333333;
+  --accordion-hover: #444444;
+  --modal-bg: #2a2a2a;
+  --button-bg: #2a2a2a;
+  --button-text: #ffffff;
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.modal-content {
+  background-color: var(--modal-bg);
+  color: var(--text-color);
+}
+
+.accordion {
+  background-color: var(--accordion-bg);
+  color: var(--text-color);
+}
+
+.accordion:hover {
+  background-color: var(--accordion-hover);
+}
+
+.panel {
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+}
+
+.floating-toolbar button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  font-weight: bold;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+/* Invert schematic image in dark mode */
+body.dark #schematic {
+  filter: invert(1) hue-rotate(180deg);
+}
+
