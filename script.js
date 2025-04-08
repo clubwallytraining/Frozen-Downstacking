@@ -63,7 +63,16 @@ const content = {
     </div>
 
     
-  `
+  `,
+
+  qrcode: `
+  <h2>Scan to View This Site</h2>
+  <img src="assets/qrcode.png" alt="QR Code to website" style="max-width: 300px; width: 100%; border-radius: 12px;" />
+  <p>Use your phone's camera to scan and visit the site.</p>
+`,
+
+
+
 };
 
 
