@@ -57,7 +57,7 @@ const content = {
     <h2>Feature Pallets</h2>
 
     
-    <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/feature%20pallet.png" alt="Features Pallets" />
+    <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/feature%20pallet.png" alt="Features Pallets" width="240" height="180"/>
     <p>Please separate from regular freight onto a separate pallet.</p>
 
 
