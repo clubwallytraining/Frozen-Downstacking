@@ -56,11 +56,10 @@ const content = {
   features: `
     <h2>Feature Pallets</h2>
 
-    <button class="accordion">Features</button>
-    <div class="panel">
-      <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/feature%20pallet.png" alt="Features Pallets" />
-      <p>Please separate from regular freight onto a separate pallet.</p>
-    </div>
+    
+    <img src="https://github.com/clubwallytraining/Frozen-Downstacking/raw/main/resources/feature%20pallet.png" alt="Features Pallets" />
+    <p>Please separate from regular freight onto a separate pallet.</p>
+
 
     
   `,
