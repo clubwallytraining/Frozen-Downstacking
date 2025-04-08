@@ -68,7 +68,9 @@ const content = {
   qrcode: `
   <h2>Scan to View This Site</h2>
   <img src="assets/qrcode.png" alt="QR Code to website" style="max-width: 300px; width: 100%; border-radius: 12px;" />
-  <p>Use your phone's camera to scan and visit the site.</p>
+  <p>- Use your phone's camera to scan and visit the site.
+  <br>- Turn off WIFI if images do not load and refresh
+  <br> - Don't forget to save to homescreen so you always have access!</p>
 `,
 
 
